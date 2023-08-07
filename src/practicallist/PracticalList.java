@@ -91,11 +91,14 @@ class Sadia {
         
         this.height = height;
         this.weight = weight;
-        this.color = "Dark Brown";
+        this.color = "Beige";
     }
     /**
      * What is constructor overloading?
      * Constructors with same name but different parameters
+     * Definition of Throws & Throw
+     * Throws: Declare exceptions
+     * Throw: Raise an exception
      */
     
     public void getSadiaWithInformation() {
@@ -147,8 +150,27 @@ public class PracticalList {
              * Which included in Java library
              */
 
-
-            Sadia sadia = new Sadia(5.4, 54, "White Brown");
+            Thread thread1 = new Thread(() -> {
+                Sadia sadia = new Sadia(5.4, 54, "Alabaster");
+                sadia.getSadiaWithInformation();
+            });
+            
+            Thread thread2 = new Thread(() -> {
+                Sadia sadia = new Sadia(5.4, 54, "Honey");
+                sadia.getSadiaWithInformation();
+            });
+            
+            thread1.start();
+            thread2.start();
+            
+            thread1.join();
+            thread2.join();
+            /**
+             * What is Multi-threading?
+             * Parallel execution of tasks of a program
+             */
+            
+            Sadia sadia = new Sadia(5.4, 54, "Carotenoid");
             sadia.getSadiaWithInformation();
             /**
              * What is object declaration
