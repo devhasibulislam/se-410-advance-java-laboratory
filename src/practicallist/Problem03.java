@@ -6,7 +6,8 @@
 package practicallist;
 
 /**
- *
+ * Write a program in Java to demonstrate use of this keyword. Check whether this can access the private members of the class or not.
+ * 
  * @author hasib
  */
 public class Problem03 {
